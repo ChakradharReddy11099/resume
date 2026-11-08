@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume and professional profile">
+  <title>Your Name | Resume</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #596579;
+      --accent: #2457c5;
+      --line: #e2e7ef;
+      --paper: #fff;
+      --canvas: #f3f5f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: min(900px, calc(100% - 32px));
+      margin: 40px auto;
+      padding: clamp(24px, 6vw, 64px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 16px 48px rgb(23 32 51 / 7%);
+    }
+
+    header { padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+    h1 { margin: 0; font-size: clamp(2.2rem, 7vw, 3.5rem); line-height: 1.1; letter-spacing: -0.045em; }
+    .headline { margin: 10px 0 16px; color: var(--accent); font-size: 1.2rem; font-weight: 650; }
+    .contact { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: .95rem; }
+    .contact a { overflow-wrap: anywhere; }
+
+    section { padding-top: 26px; }
+    h2 { margin: 0 0 14px; font-size: 1.15rem; letter-spacing: .08em; text-transform: uppercase; }
+    p { margin: 0 0 12px; }
+    .entry { margin: 0 0 20px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; }
+    h3 { margin: 0; font-size: 1.05rem; }
+    .date, .organization, .muted { color: var(--muted); }
+    .organization { margin: 2px 0 7px; }
+    ul { margin: 8px 0 0; padding-left: 21px; }
+    li + li { margin-top: 4px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .skills li { padding: 4px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+    footer { margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 560px) {
+      .page { width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+      .entry-heading { display: block; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      .page { width: 100%; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Your Name</h1>
+      <p class="headline">Your Professional Title</p>
+      <div class="contact" aria-label="Contact information">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="https://github.com/">GitHub</a>
+        <span>Your City, Country</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Profile</h2>
+      <p>Write a brief introduction about your experience, strengths, and the kind of role you are seeking. Keep it specific and focused on the value you bring.</p>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <article class="entry">
+        <div class="entry-heading">
+          <h3>Job Title</h3>
+          <span class="date">Month Year – Present</span>
+        </div>
+        <p class="organization">Company Name · City, Country</p>
+        <ul>
+          <li>Describe a meaningful achievement and its impact using clear, concise language.</li>
+          <li>Add another accomplishment, ideally with measurable results.</li>
+        </ul>
+      </article>
+      <article class="entry">
+        <div class="entry-heading">
+          <h3>Previous Job Title</h3>
+          <span class="date">Month Year – Month Year</span>
+        </div>
+        <p class="organization">Previous Company · City, Country</p>
+        <ul>
+          <li>Summarize your responsibilities and contributions in this role.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <article class="entry">
+        <div class="entry-heading">
+          <h3>Degree or Qualification</h3>
+          <span class="date">Year – Year</span>
+        </div>
+        <p class="organization">School or University · City, Country</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills">
+        <li>Skill one</li>
+        <li>Skill two</li>
+        <li>Skill three</li>
+        <li>Skill four</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <article class="entry">
+        <div class="entry-heading">
+          <h3>Project Name</h3>
+          <a href="https://github.com/">View project</a>
+        </div>
+        <p class="muted">A short description of what you built, the tools you used, and the outcome.</p>
+      </article>
+    </section>
+
+    <footer>References available upon request.</footer>
+  </main>
+</body>
+</html>
